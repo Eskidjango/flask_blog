@@ -1,4 +1,6 @@
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 
 class Config:
@@ -8,4 +10,4 @@ class Config:
     MAIL_PORT = 587
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get('EMAIL_USER')
-    MAIL_PASSWORD = os.environ.get('EMAIL_PASS')
+    MAIL_PASSWORD = os.environ.get('EMAIL_PASSWORD')
