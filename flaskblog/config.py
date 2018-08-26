@@ -13,5 +13,5 @@ class Config:
     MAIL_PASSWORD = os.environ.get('EMAIL_PASSWORD')
 
 
-class ConfigTest:
-    pass
+class ConfigTest(Config):
+    SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI_TEST')

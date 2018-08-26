@@ -1,9 +1,6 @@
-from unittest import TestSuite
-
-from flaskblog import create_app
 import unittest
 
-app = create_app()
+from unittest import TestSuite
 
 
 def load_tests(loader, tests, pattern):

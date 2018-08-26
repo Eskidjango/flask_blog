@@ -3,17 +3,17 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from flask import Flask, url_for
-from flaskblog import create_app, db
+from flaskblog import create_test_app, db
 from flask_testing import TestCase
 
 
 class UsersTestCases(TestCase):
 
-    SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI_TEST')
-    TESTING = True
+    # SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI_TEST')
+    # TESTING = True
 
     def create_app(self):
-        app = create_app()
+        app = create_test_app()
         app.config['WTF_CSRF_ENABLED'] = False
         return app
 
@@ -24,6 +24,7 @@ class UsersTestCases(TestCase):
         db.session.remove()
         db.drop_all()
 
+    # Testing user's routes
     def test_register_page_get(self):
         """
         check if register page shows up correctly
