@@ -11,3 +11,7 @@ class Config:
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get('EMAIL_USER')
     MAIL_PASSWORD = os.environ.get('EMAIL_PASSWORD')
+
+
+class ConfigTest:
+    pass
